@@ -1,14 +1,22 @@
 {
-  "name": "starter-api-express",
+  "name": "@chatpta/starter-api-express",
+  "repository": "https://github.com/chatpta/starter-api-express.git",
   "version": "1.0.0",
-  "description": "",
+  "description": "Chatpta express starter api",
   "main": "index.js",
+  "keywords": [
+    "chatpta",
+    "express",
+    "js",
+    "javascript",
+    "starter api"
+  ],
   "bin": {
     "create-express-api": "./bin/create-express-api.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Chatpta team",
   "license": "ISC"
 }
