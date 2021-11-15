@@ -24,7 +24,7 @@ try {
     fs.mkdirSync( projectPath );
 } catch ( err ) {
     if ( err.code === 'EEXIST' ) {
-        console.log( `The file ${ projectName } already exist in the current directory, please give it another name.` );
+        console.log( `\nThe file ${ projectName } already exist in the current directory, please give it another name.` );
     } else {
         console.log( err );
     }
@@ -34,19 +34,19 @@ try {
 // Create api application
 async function main() {
     try {
-        console.log( 'Downloading files...' );
+        console.log( '\nDownloading files...' );
         execSync( `git clone --depth 1 ${ git_repo } ${ projectPath }` );
 
         process.chdir( projectPath );
 
-        console.log( 'Installing dependencies...' );
+        console.log( '\nInstalling dependencies...' );
         execSync( 'npm install' );
 
-        console.log( 'Removing useless files' );
+        console.log( '\nRemoving useless files' );
         execSync( 'npx rimraf ./.git' );
-        fs.rmdirSync( path.join( projectPath, 'bin' ), { recursive: true } );
+        fs.rmSync( path.join( projectPath, 'bin' ), { recursive: true } );
 
-        console.log( 'The installation is done, this is ready to use !' );
+        console.log( `\nThe installation is done,${ projectName } is ready to use !\n` );
 
     } catch ( error ) {
         console.log( error );
