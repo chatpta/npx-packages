@@ -45,7 +45,7 @@ async function main() {
         console.log( '\nRemoving useless files' );
         fs.rmSync( path.join( projectPath, '.git' ), { recursive: true } );
 
-        console.log( `\nThe installation is done,${ projectName } is ready to use !\n` );
+        console.log( `\n${ projectName } is ready to use !\n` );
 
     } catch ( error ) {
         console.log( error );
