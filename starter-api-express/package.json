@@ -1,7 +1,7 @@
 {
   "name": "@chatpta/starter-api-express",
   "repository": "https://github.com/chatpta/starter-api-express.git",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Chatpta express starter api",
   "main": "index.js",
   "keywords": [
